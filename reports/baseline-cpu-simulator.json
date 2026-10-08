@@ -1,0 +1,81 @@
+{
+  "runner": "deterministic CPU timing simulator",
+  "results": [
+    {
+      "scenario": {
+        "name": "short_low_concurrency",
+        "requests": 16,
+        "prompt_len": 32,
+        "max_new_tokens": 16,
+        "max_seqs": 2
+      },
+      "metrics": {
+        "ttft_p50_ms": 17.71841594018042,
+        "ttft_p99_ms": 29.78524984791875,
+        "tpot_p50_ms": 0.13370558929940066,
+        "tpot_p99_ms": 0.14064999607702097,
+        "throughput_tokens_per_s": 8058.19099912296,
+        "completed": 16,
+        "peak_kv_utilization": 0.00146484375,
+        "total_preemptions": 0
+      }
+    },
+    {
+      "scenario": {
+        "name": "short_high_concurrency",
+        "requests": 16,
+        "prompt_len": 32,
+        "max_new_tokens": 16,
+        "max_seqs": 8
+      },
+      "metrics": {
+        "ttft_p50_ms": 23.409084184095263,
+        "ttft_p99_ms": 23.413834162056446,
+        "tpot_p50_ms": 0.5157639427731434,
+        "tpot_p99_ms": 0.5157639427731434,
+        "throughput_tokens_per_s": 8219.749872524204,
+        "completed": 16,
+        "peak_kv_utilization": 0.005859375,
+        "total_preemptions": 0
+      }
+    },
+    {
+      "scenario": {
+        "name": "long_prefill",
+        "requests": 16,
+        "prompt_len": 512,
+        "max_new_tokens": 16,
+        "max_seqs": 8
+      },
+      "metrics": {
+        "ttft_p50_ms": 176.24516715295613,
+        "ttft_p99_ms": 220.17970914021134,
+        "tpot_p50_ms": 3.0689499961833158,
+        "tpot_p99_ms": 4.4844528039296465,
+        "throughput_tokens_per_s": 1132.6928230835276,
+        "completed": 16,
+        "peak_kv_utilization": 0.064453125,
+        "total_preemptions": 0
+      }
+    },
+    {
+      "scenario": {
+        "name": "long_decode",
+        "requests": 16,
+        "prompt_len": 32,
+        "max_new_tokens": 128,
+        "max_seqs": 8
+      },
+      "metrics": {
+        "ttft_p50_ms": 86.19504095986485,
+        "ttft_p99_ms": 86.20000001974404,
+        "tpot_p50_ms": 0.5571578104987623,
+        "tpot_p99_ms": 0.5571578104987623,
+        "throughput_tokens_per_s": 13422.961748832027,
+        "completed": 16,
+        "peak_kv_utilization": 0.01953125,
+        "total_preemptions": 0
+      }
+    }
+  ]
+}

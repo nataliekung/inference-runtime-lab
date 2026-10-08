@@ -1,0 +1,42 @@
+{
+  "environment": {
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "python": "3.14.4",
+    "torch": {
+      "available": true,
+      "version": "2.13.0",
+      "cuda_available": false,
+      "mps_available": true
+    },
+    "device": "mps"
+  },
+  "workload": {
+    "requests": 8,
+    "prompt_len": 128,
+    "max_new_tokens": 32,
+    "hidden_size": 128,
+    "num_heads": 4,
+    "warmup_runs": 1
+  },
+  "metrics": {
+    "ttft_p50_ms": 21.99658309109509,
+    "ttft_p99_ms": 25.19395900890231,
+    "tpot_p50_ms": 3.3578413929189406,
+    "tpot_p99_ms": 3.3578413929189406,
+    "throughput_tokens_per_s": 2099.9851302303514,
+    "completed": 8,
+    "peak_kv_utilization": 0.3125,
+    "total_preemptions": 0
+  },
+  "profile": {
+    "total_cpu_time_ms": 230.971311,
+    "top_ops": [
+      "aten::softmax",
+      "aten::_softmax",
+      "aten::matmul",
+      "aten::mm",
+      "aten::cat"
+    ],
+    "notes": "bench"
+  }
+}

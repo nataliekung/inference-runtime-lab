@@ -1,0 +1,26 @@
+[project]
+name = "inference-runtime-lab"
+version = "0.1.0"
+description = "Portfolio sandbox for GPU-aware inference runtime learning"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+torch = ["numpy>=2.0", "torch>=2.1.0"]
+dev = ["pytest>=8.0.0", "ruff"]
+
+[project.scripts]
+irl-bench = "irl.bench.cli:main"
+irl-profile = "irl.bench.profile_cli:main"
+irl-sweep = "irl.bench.sweep:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
