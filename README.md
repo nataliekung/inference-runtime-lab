@@ -1,8 +1,7 @@
 # Inference Runtime Lab
 
-Personal sandbox for learning inference runtime internals: paged KV accounting,
-continuous batching, chunked prefill, benchmarking. Not production code from any
-employer.
+Sandbox for learning inference runtime internals: paged KV accounting,
+continuous batching, chunked prefill, benchmarking.
 
 ## Scope
 
